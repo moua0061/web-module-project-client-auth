@@ -6,21 +6,15 @@ import FriendList from './components/FriendList';
 import Logout from './components/Logout';
 import PrivateRoute from './components/PrivateRoute';
 import AddFriend from './components/AddFriend';
+import Header from './components/Header';
 
 
 
 function App() {
   return (
-    <Router>
+    
         <div className="App">
-        <header>
-          <h1>Friends Database</h1>
-          <Link to='/login'>Login &nbsp;</Link>
-          <Link to='/friendlist'>Friend List &nbsp;</Link>
-          <Link to='/addfriend'>Add Friend &nbsp;</Link>
-          <Link to='/logout'>Logout &nbsp;</Link>
-        </header>
-
+        <Header />
         <Switch>
           <PrivateRoute path='/friendlist' component={FriendList} />
           <PrivateRoute path='/logout' component={Logout} />
@@ -29,7 +23,7 @@ function App() {
           <Route exact path='/' component={Login} />
         </Switch>
       </div>
-    </Router>
+    
   );
 }
 
