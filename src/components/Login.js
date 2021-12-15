@@ -20,7 +20,7 @@ const Login = () => {
         // console.log(state);
         axios.post('http://localhost:9000/api/login', state)
             .then(resp => {
-                console.log(resp);
+                // console.log(resp);
                 const token = resp.data.token;
                 const username = resp.data.username;
                 const role = resp.data.role
